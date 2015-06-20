@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.2.2"
 
+gem "active_model_serializers"
 gem "airbrake"
 gem "autoprefixer-rails"
 gem "delayed_job_active_record"

@@ -1,7 +1,4 @@
 module Api
-  class AlbumsController < ApplicationController
-    def index
-      render json: Album.all
-    end
+  class AlbumsController < JSONAPI::ResourceController
   end
 end

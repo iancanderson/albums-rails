@@ -6,14 +6,16 @@ describe "GET /api/v1/albums" do
 
     json_get "/api/albums"
 
-    albums_response = json_response["albums"]
-
     expect(response).to be_successful
-    expect(albums_response).to eq([
+    expect(json_response["data"]).to eq([
       {
-        "id" => album.id,
-        "artist" => album.artist,
-        "title" => album.title,
+        "id" => album.id.to_s,
+        "type" => "albums",
+        "attributes" => {
+          "artist" => album.artist,
+          "title" => album.title,
+        },
+        "links" => { "self" => url_for([:api, album]) },
       }
     ])
   end

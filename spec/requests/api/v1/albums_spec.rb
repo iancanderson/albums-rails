@@ -14,6 +14,7 @@ describe "GET /api/v1/albums" do
         "attributes" => {
           "artist" => album.artist,
           "title" => album.title,
+          "released-on" => album.released_on.to_s,
         },
         "links" => { "self" => url_for([:api, album]) },
       }

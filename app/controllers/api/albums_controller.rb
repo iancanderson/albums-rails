@@ -1,4 +1,4 @@
 module Api
-  class AlbumsController < JSONAPI::ResourceController
+  class AlbumsController < ApplicationController
   end
 end

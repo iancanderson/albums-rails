@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20150621151818) do
     t.string   "artist",      null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.date     "released_on"
+    t.date     "released_on", null: false
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
